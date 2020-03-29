@@ -1,0 +1,39 @@
+<main>
+  <div style="height: 100vh;">
+    <gridster [options]="options" *ngIf="!remove">
+      <gridster-item [item]="item" *ngFor="let item of dashboard">
+        <!-- <div class="button-holder"> -->
+          <!-- <div class="col-lg-12"> -->
+            <div class="panel panel-color panel-primary">
+                <div class="panel-heading"> 
+                    <h3 class="panel-title">Panel Primary</h3> 
+                </div> 
+                <div class="panel-body"> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                </div> 
+            </div>
+        <!-- </div> -->
+          <!-- <div class="gridster-item-content" *ngIf="item.hasContent">
+          </div>
+          <div class="item-buttons" *ngIf="item.hasContent">
+            <button class="drag-handler">
+            </button>
+            <button class="remove-button" (mousedown)="removeItem($event, item)" (touchstart)="removeItem($event, item)"
+              matTooltip="Remove">
+            </button>
+          </div>
+          <label *ngIf="!item.hasContent">{{item.label}}</label>
+          <button *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)" (touchstart)="removeItem($event, item)"
+            matTooltip="Remove">
+          </button> -->
+        <!-- </div> -->
+      </gridster-item>
+    </gridster>
+  </div>
+  <!-- Here is the relevant part:
+            ngIf -> display text when the 'users' are loaded from the observable
+            ngFor -> display user names one by one -->
+  <!-- <div class="dynamic-u  sers" *ngIf="users">
+              Dynamic users are: <span *ngFor="let user of users">{{user.name}} </span>
+            </div> -->
+</main>

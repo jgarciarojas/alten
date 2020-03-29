@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label class="control-label">Parts Avalaible</label>
+    <div class="input-icon right">
+      <select class="form-control" [formControl]="input" [(ngModel)]="value" #select>
+        <option *ngFor="let item of data" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
